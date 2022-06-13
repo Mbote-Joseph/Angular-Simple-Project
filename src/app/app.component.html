@@ -1,1 +1,14 @@
-<app-home></app-home>
+<app-header></app-header>
+<div class="container">
+  <form>
+    <input
+      class="form-control form-group"
+      type="text"
+      name="name"
+      placeholder="Name"
+      [(ngModel)]="home.myName.name"
+    />
+  </form>
+</div>
+<app-home [myname]="home.name"></app-home>
+<router-outlet></router-outlet>
